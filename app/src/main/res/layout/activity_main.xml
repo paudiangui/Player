@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/lytPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:clipToPadding="false"
+        android:keepScreenOn="true">
+
+
+
+        <!--Image1 container-->
+        <RelativeLayout
+            android:id="@+id/rlImage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:clipToPadding="false"
+            android:keepScreenOn="true"
+            android:visibility="invisible">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewImage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="8dp"
+                app:cardMaxElevation="8dp"
+                app:cardPreventCornerOverlap="false"
+                app:contentPadding="0dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/viewImage1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:cropToPadding="true"
+                    android:visibility="visible" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <!--Image2 container-->
+        <RelativeLayout
+            android:id="@+id/rlImage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:clipToPadding="false"
+            android:keepScreenOn="true"
+            android:visibility="invisible">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewImage2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:visibility="visible"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="8dp"
+                app:cardMaxElevation="8dp"
+                app:cardPreventCornerOverlap="false"
+                app:contentPadding="0dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/viewImage2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:cropToPadding="true"
+                    android:visibility="visible" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/white"/>
+    </RelativeLayout>
+</layout>
