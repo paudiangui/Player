@@ -1,8 +1,7 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp")
-
+    id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -28,16 +27,20 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
 
-    buildFeatures{
-        dataBinding=true
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+        buildConfig = true
     }
 }
 
@@ -69,7 +72,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("com.google.android.material:material:1.5.0")
 
-    implementation ("com.squareup.okhttp3:okhttp:3.14.7")
+    implementation("com.squareup.okhttp3:okhttp:3.14.7")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
